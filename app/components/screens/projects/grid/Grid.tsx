@@ -1,5 +1,6 @@
 import classes from './Grid.module.scss'
 import GridItem from './grid-item/GridItem'
+import { useState } from 'react'
 
 const Grid = () => {
     const projects: IProject[] = [
@@ -8,43 +9,80 @@ const Grid = () => {
             title: 'АфишаDaily',
             path: '/images/links/afisha-daily.png',
             link: 'https://daily.afisha.ru/',
-            gradient: { from: '#E3E3E0', to: '#67C1F4' },
-            width: 240
+            gradient: { from: '#E3E3E0', to: '#67C1F4' }
         },
         {
             id: 1,
             title: 'СекретФирмы',
             path: '/images/links/secret-firmi.png',
             link: 'https://secretmag.ru/',
-            gradient: { from: '#E3E3E0', to: '#FDD97C' },
-            width: 280
+            gradient: { from: '#E3E3E0', to: '#FDD97C' }
         },
         {
             id: 2,
             title: 'LentaRu',
             path: '/images/links/lentaru.png',
             link: 'https://lenta.ru/',
-            gradient: { from: '#E3E3E0', to: '#767A8E' },
-            width: 320
+            gradient: { from: '#E3E3E0', to: '#767A8E' }
         },
         {
             id: 3,
             title: 'MoslentaRu',
             path: '/images/links/moslenta.png',
             link: 'https://moslenta.ru/',
-            gradient: { from: '#E3E3E0', to: '#F6A8A8' },
-            width: 340
+            gradient: { from: '#E3E3E0', to: '#F6A8A8' }
         },
         {
             id: 4,
             title: 'РамблерМедиа',
             path: '/images/links/rambler-media.png',
             link: 'https://motor.ru/',
-            gradient: { from: '#E3E3E0', to: '#7580E5' },
-            width: 320
+            gradient: { from: '#E3E3E0', to: '#7580E5' }
+        },
+        {
+            id: 5,
+            title: 'АфишаDaily',
+            path: '/images/links/afisha-daily.png',
+            link: 'https://daily.afisha.ru/',
+            gradient: { from: '#E3E3E0', to: '#67C1F4' }
+        },
+        {
+            id: 6,
+            title: 'СекретФирмы',
+            path: '/images/links/secret-firmi.png',
+            link: 'https://secretmag.ru/',
+            gradient: { from: '#E3E3E0', to: '#FDD97C' }
+        },
+        {
+            id: 7,
+            title: 'LentaRu',
+            path: '/images/links/lentaru.png',
+            link: 'https://lenta.ru/',
+            gradient: { from: '#E3E3E0', to: '#767A8E' }
+        },
+        {
+            id: 8,
+            title: 'MoslentaRu',
+            path: '/images/links/moslenta.png',
+            link: 'https://moslenta.ru/',
+            gradient: { from: '#E3E3E0', to: '#F6A8A8' }
+        },
+        {
+            id: 9,
+            title: 'РамблерМедиа',
+            path: '/images/links/rambler-media.png',
+            link: 'https://motor.ru/',
+            gradient: { from: '#E3E3E0', to: '#7580E5' }
+        },
+        {
+            id: 10,
+            title: 'СекретФирмы',
+            path: '/images/links/secret-firmi.png',
+            link: 'https://secretmag.ru/',
+            gradient: { from: '#E3E3E0', to: '#FDD97C' }
         }
     ]
-
+    const [amount, setAmount] = useState(5)
     return (
         <div className={classes['project-section']}>
             <div className={classes['container']}>
@@ -57,10 +95,13 @@ const Grid = () => {
                     работой.
                 </p>
                 <div className={classes['project-section__grid']}>
-                    {projects.map(item => (
+                    {projects.slice(0, amount).map(item => (
                         <GridItem key={item.id} item={item} />
                     ))}
-                    <div className={classes['project-section__add']}>
+                    <div
+                        className={classes['project-section__add']}
+                        onClick={() => setAmount(amount + 3)}
+                    >
                         <div
                             className={classes['project-section__btn']}
                             style={{

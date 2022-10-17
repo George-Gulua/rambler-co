@@ -7,5 +7,4 @@ interface IProject {
         from: string
         to: string
     }
-    width: number
 }

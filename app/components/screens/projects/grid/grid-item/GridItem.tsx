@@ -23,7 +23,7 @@ const GridItem: FC<ProjectItemProps> = ({ item }) => {
                 <Image
                     src={item.path}
                     alt={'иконка проекта'}
-                    width={item.width}
+                    width={260}
                     height={140}
                 />
             </div>
