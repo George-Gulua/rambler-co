@@ -5,6 +5,8 @@
   background: $bg-color;
   align-items: center;
   justify-content: space-between;
+  max-width: 1920px;
+  margin: 0 auto;
 
   &__logo {
     font-weight: 400;

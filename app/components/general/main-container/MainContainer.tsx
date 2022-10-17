@@ -5,7 +5,7 @@ const MainContainer = ({ children }: any) => {
     return (
         <div className={classes['main-container']}>
             <Header />
-            <div>{children}</div>
+            {children}
         </div>
     )
 }

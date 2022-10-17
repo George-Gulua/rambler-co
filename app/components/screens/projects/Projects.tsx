@@ -2,7 +2,7 @@ import MainContainer from '../../general/main-container/MainContainer'
 import MetaTitle from '../../ui/MetaTitle'
 import Information from './Information/Information'
 import classes from './Projects.module.scss'
-import ProjectList from './project-list/ProjectList'
+import Grid from './grid/Grid'
 
 const Projects = () => {
     return (
@@ -10,7 +10,7 @@ const Projects = () => {
             <MainContainer>
                 <MetaTitle title={'projects'} />
                 <Information />
-                <ProjectList />
+                <Grid />
             </MainContainer>
         </div>
     )

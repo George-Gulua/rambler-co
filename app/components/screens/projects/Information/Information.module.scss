@@ -2,26 +2,32 @@
 @import "app/assets/styles/variables.scss";
 
 .information {
-  display: flex;
-  padding: 160px;
-  gap: 220px;
+  padding: 160px 0;
   background: $primary-color;
+
+  .container {
+    display: flex;
+    gap: 220px;
+  }
 
 
   &__block {
     max-width: 45%;
   }
+
   &__title {
     font-size: 48px;
     font-weight: 500;
     cursor: default;
   }
+
   &__text {
     margin-top: 48px;
     line-height: 32px;
-    font-weight: 200;
+    font-weight: 300;
     cursor: default;
   }
+
   .btn {
     margin-top: 32px;
   }

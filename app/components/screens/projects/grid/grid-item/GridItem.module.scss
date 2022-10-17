@@ -1,0 +1,27 @@
+.grid-item {
+  flex: 1 1 calc((100% / 3) - 8rem);
+
+  .gradient {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px 0 16px 0;
+    transition: .5s;
+    background-size: 200% auto;
+    padding: 28px 0;
+  }
+
+  &:hover {
+    .gradient {
+      border-radius: 0 16px 0 16px;
+      box-shadow: 0 0 36px rgba(0, 0, 0, 0.6);
+      background-position: right center;
+    }
+  }
+
+  &__title {
+    text-align: left;
+    margin-top: 12px;
+    font-weight: 400;
+  }
+}
