@@ -1,13 +1,18 @@
-import Information from './information/Information'
 import MainContainer from '../../general/main-container/MainContainer'
 import MetaTitle from '../../ui/MetaTitle'
+import Information from './Information/Information'
+import classes from './Projects.module.scss'
+import ProjectList from './project-list/ProjectList'
 
 const Projects = () => {
     return (
-        <MainContainer>
-            <MetaTitle title={'projects'} />
-            <Information />
-        </MainContainer>
+        <div className={classes['projects']}>
+            <MainContainer>
+                <MetaTitle title={'projects'} />
+                <Information />
+                <ProjectList />
+            </MainContainer>
+        </div>
     )
 }
 

@@ -1,0 +1,14 @@
+@import "app/assets/styles/variables.scss";
+
+.btn {
+  border: none;
+  padding: 24px;
+  background: $secondary-color;
+  color: $bg-color;
+  text-transform: uppercase;
+  font-size: 18px;
+  transition: .3s;
+  &:hover {
+    opacity: 0.6;
+  }
+}
