@@ -24,7 +24,7 @@ const GridItem: FC<ProjectItemProps> = ({ item }) => {
                     src={item.path}
                     alt={'иконка проекта'}
                     width={260}
-                    height={140}
+                    height={120}
                 />
             </div>
             <h3 className={classes['grid-item__title']}>{item.title}</h3>

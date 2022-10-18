@@ -21,7 +21,9 @@ const Information = () => {
                         мира. Каждая задача прорабатывается до тончайших деталей
                         и разрабаетывается согласно выстроенной ахритектуре.
                     </p>
-                    <button className={classes['btn']}>заказать проект</button>
+                    <a href={'#form'} className={classes['btn']}>
+                        заказать проект
+                    </a>
                 </div>
             </div>
         </div>

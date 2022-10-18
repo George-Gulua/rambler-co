@@ -6,13 +6,13 @@ import classNames from 'classnames'
 
 const Header = () => {
     const links: ILink[] = [
-        { id: 0, title: 'Проекты', path: '/' },
-        { id: 1, title: 'О нас', path: '/about' },
-        { id: 2, title: 'Отзывы', path: '/reviews' }
+        { id: 0, title: 'проекты', path: '/' },
+        { id: 1, title: 'о нас', path: '/about' },
+        { id: 2, title: 'отзывы', path: '/reviews' }
     ]
     const { pathname }: any = useRouter()
     return (
-        <div className={classes['header']}>
+        <header className={classes['header']}>
             <h2 className={classes['header__logo']}>Rambler&#38;Co</h2>
             <nav className={classes['header__menu']}>
                 {links.map(item => (
@@ -32,7 +32,7 @@ const Header = () => {
                     </Link>
                 ))}
             </nav>
-        </div>
+        </header>
     )
 }
 

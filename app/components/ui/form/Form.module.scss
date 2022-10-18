@@ -1,0 +1,52 @@
+@import 'app/assets/styles/base.scss';
+@import 'app/assets/styles/variables.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+
+  &__message {
+    outline: none;
+    border: none;
+    width: 100%;
+    margin-top: 32px;
+    padding: 12px 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 16px 0 16px 16px;
+    resize: none;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .btn {
+    align-self: center;
+    margin-top: 32px;
+    width: 40%;
+  }
+
+}
+
+.custom-input {
+  display: flex;
+  width: 100% !important;
+
+  &__svg {
+    background: $secondary-color;
+    padding: 12px 14px;
+  }
+
+  &__field {
+    outline: none;
+    border: none;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 0 8px 8px 0;
+    padding: 12px 20px;
+    width: 100% !important;
+  }
+}

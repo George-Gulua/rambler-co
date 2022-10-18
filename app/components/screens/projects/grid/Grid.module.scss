@@ -9,6 +9,7 @@
     font-size: 32px;
     font-weight: 500;
     margin-bottom: 48px;
+    cursor: default;
   }
 
   &__text {
@@ -16,6 +17,7 @@
     max-width: 60%;
     line-height: 30px;
     margin: 0 auto;
+    cursor: default;
   }
 
   &__grid {
@@ -23,7 +25,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 80px 0;
+    margin-top: 80px;
     gap: 4rem;
   }
 
@@ -39,7 +41,7 @@
     transition: .5s;
     background-size: 200% auto;
     padding: 28px 0;
-    height: 196px;
+    height: 180px;
     font-size: 54px;
     color: $bg-color;
     cursor: pointer;
@@ -55,5 +57,6 @@
     text-align: left;
     margin-top: 12px;
     font-weight: 400;
+    cursor: pointer;
   }
 }
