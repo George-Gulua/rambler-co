@@ -9,7 +9,7 @@ const Footer = () => {
                 <div className={classes['container']}>
                     <div className={classes['footer__information']}>
                         <h2 className={classes['footer__title']}>
-                            Хотите веб-сайт ?
+                            Закажи веб-сайт !
                         </h2>
                         <p className={classes['footer__text']}>
                             Закажите у нас сайт и мы обещаем вам пожизненную

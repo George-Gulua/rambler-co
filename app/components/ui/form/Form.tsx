@@ -63,7 +63,7 @@ const Form = () => {
                 placeholder={'Message...'}
             />
             <button className={classes['btn']} onClick={sendMessage}>
-                оформить заказ
+                Оформить заказ
             </button>
         </div>
     )

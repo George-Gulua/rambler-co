@@ -1,8 +1,8 @@
 import MainContainer from '../app/components/general/main-container/MainContainer'
 import React from 'react'
 
-const Reviews = () => {
+const ReviewsPage = () => {
     return <MainContainer>reviews</MainContainer>
 }
 
-export default Reviews
+export default ReviewsPage

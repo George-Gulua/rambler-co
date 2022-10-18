@@ -1,0 +1,10 @@
+@import "app/assets/styles/base.scss";
+@import "app/assets/styles/variables.scss";
+
+.advantages {
+  .container {
+    display: flex;
+    padding: 80px 0;
+    justify-content: space-between;
+  }
+}

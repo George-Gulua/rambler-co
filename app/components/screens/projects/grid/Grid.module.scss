@@ -31,6 +31,10 @@
 
   &__add {
     flex: 1 1 calc((100% / 3) - 8rem);
+
+    &-hidden {
+      display: none;
+    }
   }
 
   &__btn {

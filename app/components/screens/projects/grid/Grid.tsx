@@ -1,6 +1,7 @@
 import classes from './Grid.module.scss'
 import GridItem from './grid-item/GridItem'
 import { useState } from 'react'
+import classNames from 'classnames'
 
 const Grid = () => {
     const projects: IProject[] = [
@@ -80,6 +81,13 @@ const Grid = () => {
             path: '/images/links/secret-firmi.png',
             link: 'https://secretmag.ru/',
             gradient: { from: '#E3E3E0', to: '#FDD97C' }
+        },
+        {
+            id: 11,
+            title: 'LentaRu',
+            path: '/images/links/lentaru.png',
+            link: 'https://lenta.ru/',
+            gradient: { from: '#E3E3E0', to: '#767A8E' }
         }
     ]
     const [amount, setAmount] = useState(5)
@@ -99,7 +107,12 @@ const Grid = () => {
                         <GridItem key={item.id} item={item} />
                     ))}
                     <div
-                        className={classes['project-section__add']}
+                        className={classNames({
+                            [classes['project-section__add']]:
+                                projects.length >= amount,
+                            [classes['project-section__add-hidden']]:
+                                projects.length < amount
+                        })}
                         onClick={() => setAmount(amount + 3)}
                     >
                         <div

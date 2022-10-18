@@ -1,0 +1,27 @@
+@import "app/assets/styles/base.scss";
+@import "app/assets/styles/variables.scss";
+
+.about-information {
+  padding: 120px 0;
+  background: $primary-color;
+
+  .container {
+    display: flex;
+    gap: 100px;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 500;
+    cursor: default;
+    margin-bottom: 100px;
+  }
+
+  &__text {
+    line-height: 32px;
+    font-weight: 300;
+    cursor: default;
+    max-width: 45%;
+    align-self: center;
+  }
+}

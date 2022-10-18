@@ -6,9 +6,9 @@ import classNames from 'classnames'
 
 const Header = () => {
     const links: ILink[] = [
-        { id: 0, title: 'проекты', path: '/' },
-        { id: 1, title: 'о нас', path: '/about' },
-        { id: 2, title: 'отзывы', path: '/reviews' }
+        { id: 0, title: 'Проекты', path: '/' },
+        { id: 1, title: 'О нас', path: '/about' },
+        { id: 2, title: 'Отзывы', path: '/reviews' }
     ]
     const { pathname }: any = useRouter()
     return (

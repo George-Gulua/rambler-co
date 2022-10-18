@@ -1,8 +1,8 @@
 import React from 'react'
-import MainContainer from '../app/components/general/main-container/MainContainer'
+import About from '../app/components/screens/about/About'
 
-const About = () => {
-    return <MainContainer>about</MainContainer>
+const AboutPage = () => {
+    return <About />
 }
 
-export default About
+export default AboutPage

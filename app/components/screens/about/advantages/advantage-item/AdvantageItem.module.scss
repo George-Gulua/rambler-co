@@ -1,0 +1,49 @@
+@import "app/assets/styles/base.scss";
+@import "app/assets/styles/variables.scss";
+
+.advantage-item {
+  &-main {
+    background: url("/public/images/about-info.png");
+    position: relative;
+
+    &::after {
+      content: '';
+      background-image: url("/public/images/about/arrow.svg");
+      width: 100px;
+      height: 2px;
+      position: absolute;
+    }
+
+    &::before {
+      content: '';
+      background-image: url("/public/images/about/arrow.svg");
+      width: 100px;
+      height: 100px;
+      position: absolute;
+    }
+  }
+
+  &__title {
+    font-size: 48px;
+    color: $secondary-color;
+  }
+
+  &__text {
+    font-weight: 300;
+
+    &-left {
+      text-align: left;
+      width: 75%;
+    }
+
+    &-right {
+      text-align: right;
+      width: 75%;
+      margin-left: auto;
+    }
+
+    &-center {
+      text-align: center;
+    }
+  }
+}
