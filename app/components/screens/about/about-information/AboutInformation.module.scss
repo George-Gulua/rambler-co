@@ -10,11 +10,15 @@
     gap: 100px;
   }
 
+
+  &__block {
+  }
+
   &__title {
     font-size: 48px;
     font-weight: 500;
     cursor: default;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
 
   &__text {

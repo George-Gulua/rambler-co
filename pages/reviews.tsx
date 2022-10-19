@@ -1,8 +1,8 @@
-import MainContainer from '../app/components/general/main-container/MainContainer'
-import React from 'react'
+import Reviews from '../app/components/screens/reviews/Reviews'
+import type { NextPage } from 'next'
 
-const ReviewsPage = () => {
-    return <MainContainer>reviews</MainContainer>
+const ReviewsPage: NextPage = () => {
+    return <Reviews />
 }
 
 export default ReviewsPage

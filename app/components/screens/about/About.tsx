@@ -7,7 +7,14 @@ import Advantages from './advantages/Advantages'
 const About = () => {
     return (
         <div id={'about'}>
-            <MainContainer>
+            <MainContainer
+                footerTitle={'Закажите Веб-Сайт!'}
+                footerText={
+                    'Закажите у нас сайт и мы обеащем вам пожизненную гарантию качества.'
+                }
+                feedbackType={false}
+                btnText={'Оформить заказ'}
+            >
                 <MetaTitle title={'about'} />
                 <AboutInformation />
                 <Advantages />

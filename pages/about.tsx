@@ -1,7 +1,7 @@
-import React from 'react'
 import About from '../app/components/screens/about/About'
+import type { NextPage } from 'next'
 
-const AboutPage = () => {
+const AboutPage: NextPage = () => {
     return <About />
 }
 

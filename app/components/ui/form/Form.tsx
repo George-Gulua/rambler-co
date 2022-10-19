@@ -1,17 +1,23 @@
-import React, { useRef } from 'react'
+import React, { FC, useRef } from 'react'
 import classes from './Form.module.scss'
 import Image from 'next/image'
+import classNames from 'classnames'
 
-const Form = () => {
+interface FormProps {
+    btnText: string
+    feedbackType: boolean
+}
+
+const Form: FC<FormProps> = ({ btnText, feedbackType }) => {
     const nameRef = useRef<HTMLInputElement>(null)
     const emailRef = useRef<HTMLInputElement>(null)
     const textRef = useRef<HTMLTextAreaElement>(null)
 
     const sendMessage = () => {
         const message = {
-            email: emailRef.current?.value,
             name: nameRef.current?.value,
-            text: textRef.current?.value
+            text: textRef.current?.value,
+            email: emailRef.current?.value
         }
         console.log(message)
         emailRef.current!.value = ''
@@ -21,7 +27,12 @@ const Form = () => {
     return (
         <div id={'form'} className={classes['form']}>
             <div className={classes['form__user-info']}>
-                <div className={classes['custom-input']}>
+                <div
+                    className={classNames({
+                        [classes['custom-input']]: !feedbackType,
+                        [classes['custom-input-none']]: feedbackType
+                    })}
+                >
                     <div className={classes['custom-input__svg']}>
                         <Image
                             src={'/images/input-icons/mail.svg'}
@@ -63,7 +74,7 @@ const Form = () => {
                 placeholder={'Message...'}
             />
             <button className={classes['btn']} onClick={sendMessage}>
-                Оформить заказ
+                {btnText}
             </button>
         </div>
     )

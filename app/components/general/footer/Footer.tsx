@@ -1,22 +1,32 @@
 import classes from './Footer.module.scss'
 import Form from '../../ui/form/Form'
 import Image from 'next/image'
+import { FC } from 'react'
 
-const Footer = () => {
+interface FooterProps {
+    footerTitle: string
+    footerText: string
+    btnText: string
+    feedbackType: boolean
+}
+
+const Footer: FC<FooterProps> = ({
+    footerTitle,
+    footerText,
+    btnText,
+    feedbackType
+}) => {
     return (
         <footer className={classes['footer']}>
             <div className={classes['footer__upper-side']}>
                 <div className={classes['container']}>
                     <div className={classes['footer__information']}>
                         <h2 className={classes['footer__title']}>
-                            Закажи веб-сайт !
+                            {footerTitle}
                         </h2>
-                        <p className={classes['footer__text']}>
-                            Закажите у нас сайт и мы обещаем вам пожизненную
-                            гарантию качества.
-                        </p>
+                        <p className={classes['footer__text']}>{footerText}</p>
                     </div>
-                    <Form />
+                    <Form btnText={btnText} feedbackType={feedbackType} />
                 </div>
             </div>
             <div className={classes['footer__under-side']}>

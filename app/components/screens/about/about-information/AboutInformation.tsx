@@ -11,7 +11,7 @@ const AboutInformation = () => {
                         Rambler&#38;Co
                     </h1>
                     <Image
-                        src={'/images/about-info.png'}
+                        src={'/images/information/about-info.png'}
                         width={440}
                         height={240}
                         alt={'Офис'}

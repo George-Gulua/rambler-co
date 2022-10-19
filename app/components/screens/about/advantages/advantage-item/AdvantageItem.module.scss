@@ -3,23 +3,33 @@
 
 .advantage-item {
   &-main {
-    background: url("/public/images/about-info.png");
-    position: relative;
-
-    &::after {
-      content: '';
-      background-image: url("/public/images/about/arrow.svg");
-      width: 100px;
-      height: 2px;
-      position: absolute;
-    }
+    position: absolute;
+    padding: 50px 50px 72px 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("/images/main-advantage/main-advantage.png");
 
     &::before {
       content: '';
-      background-image: url("/public/images/about/arrow.svg");
-      width: 100px;
-      height: 100px;
       position: absolute;
+      top: 50%;
+      left: -75%;
+      background-image: url("/images/main-advantage/arrow.svg");
+      transform: scale(1.2);
+      height: 12px;
+      width: 62px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -75%;
+      transform: rotate(180deg) scale(1.2);
+      background-image: url("/images/main-advantage/arrow.svg");
+      height: 12px;
+      width: 62px;
     }
   }
 
