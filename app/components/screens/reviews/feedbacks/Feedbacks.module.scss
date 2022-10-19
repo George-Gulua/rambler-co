@@ -1,0 +1,42 @@
+@import "app/assets/styles/base.scss";
+@import "app/assets/styles/variables.scss";
+
+.feedbacks {
+  padding: 80px 0;
+
+  &__title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 48px;
+    cursor: default;
+  }
+
+  &__list {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__list-arrows {
+    display: flex;
+    gap: 20px;
+    cursor: default;
+  }
+
+  &__left-arrow {
+    align-self: center;
+    cursor: pointer;
+  }
+
+  &__right-arrow {
+    align-self: center;
+    transform: rotate(180deg);
+    cursor: pointer;
+  }
+
+  &__arrow-none {
+    display: none;
+    visibility: hidden;
+  }
+}

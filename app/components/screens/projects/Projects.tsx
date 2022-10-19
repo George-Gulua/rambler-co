@@ -3,8 +3,13 @@ import MetaTitle from '../../ui/MetaTitle'
 import Information from '../../general/Information/Information'
 import classes from './Projects.module.scss'
 import Grid from './grid/Grid'
+import { FC } from 'react'
 
-const Projects = () => {
+interface ProjectsProps {
+    projects: IProject[]
+}
+
+const Projects: FC<ProjectsProps> = ({ projects }) => {
     return (
         <div className={classes['projects']}>
             <MainContainer
@@ -26,7 +31,7 @@ const Projects = () => {
                     width={340}
                     height={220}
                 />
-                <Grid />
+                <Grid projects={projects} />
             </MainContainer>
         </div>
     )

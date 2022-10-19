@@ -71,6 +71,7 @@ const Form: FC<FormProps> = ({ btnText, feedbackType }) => {
                 name="text"
                 cols={30}
                 rows={10}
+                maxLength={1000}
                 placeholder={'Message...'}
             />
             <button className={classes['btn']} onClick={sendMessage}>

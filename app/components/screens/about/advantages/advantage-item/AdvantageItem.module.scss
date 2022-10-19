@@ -4,7 +4,7 @@
 .advantage-item {
   &-main {
     position: absolute;
-    padding: 50px 50px 72px 50px;
+    padding: 50px 60px 80px 62px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -34,12 +34,12 @@
   }
 
   &__title {
-    font-size: 48px;
+    font-size: 40px;
     color: $secondary-color;
   }
 
   &__text {
-    font-weight: 300;
+    font-size: 20px;
 
     &-left {
       text-align: left;

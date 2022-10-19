@@ -1,0 +1,40 @@
+@import "app/assets/styles/base.scss";
+@import "app/assets/styles/variables.scss";
+
+.feedback-item {
+  align-items: baseline;
+  padding: 32px;
+  background: #F1F1F1;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: 8px 8px 16px rgba(33, 33, 33, 0.15);
+  flex: 1 1 calc(33.33% - 40px);
+  min-width: 337px;
+  max-width: 337px;
+  min-height: 200px;
+  opacity: 0.5;
+  transition: .5s;
+
+  &.active {
+    transform: scale(1.02);
+    opacity: 1;
+
+    .feedback-item__text {
+      line-height: 30px;
+      display: block;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    overflow: hidden;
+    line-height: 30px;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+  }
+}

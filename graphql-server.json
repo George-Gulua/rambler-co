@@ -1,0 +1,176 @@
+{
+  "feedbacks": [
+    {
+      "id": 0,
+      "name": "",
+      "text": ""
+    },
+    {
+      "id": 1,
+      "name": "Мария",
+      "text": "Заказывала сайт у данной компании, все выполнили в срок, я довольна результатом. Заказывала сайт у данной компании, все выполнили в срок, я довольна результатом."
+    },
+    {
+      "id": 2,
+      "name": "Эдуард",
+      "text": "Заказывал сайт у данной компании, все выполнили в срок, я доволен результатом. Заказывал сайт у данной компании, все выполнили в срок, я доволен результатом."
+    },
+    {
+      "id": 3,
+      "name": "Дмитрий",
+      "text": "Заказывал сайт у данной компании, все выполнили в срок, я доволен результатом. Заказывал сайт у данной компании, все выполнили в срок, я доволен результатом."
+    },
+    {
+      "id": 4,
+      "name": "Евгений",
+      "text": "Заказывал сайт у данной компании, все выполнили в срок, я доволен результатом. Заказывал сайт у данной компании, все выполнили в срок, я доволен результатом."
+    },
+    {
+      "id": 5,
+      "name": "Мария",
+      "text": "Заказывала сайт у данной компании, все выполнили в срок, я довольна результатом. Заказывала сайт у данной компании, все выполнили в срок, я довольна результатом."
+    },
+    {
+      "id": 6,
+      "name": "Эдуард",
+      "text": "Заказывал сайт у данной компании, все выполнили в срок, я доволен результатом. Заказывал сайт у данной компании, все выполнили в срок, я доволен результатом."
+    },
+    {
+      "id": 7,
+      "name": "Дмитрий",
+      "text": "Заказывал сайт у данной компании, все выполнили в срок, я доволен результатом. Заказывал сайт у данной компании, все выполнили в срок, я доволен результатом."
+    },
+    {
+      "id": 8,
+      "name": "Евгений",
+      "text": "Заказывал сайт у данной компании, все выполнили в срок, я доволен результатом. Заказывал сайт у данной компании, все выполнили в срок, я доволен результатом."
+    },
+    {
+      "id": 9999,
+      "name": "",
+      "text": ""
+    }
+  ],
+  "projects": [
+    {
+      "id": 0,
+      "title": "АфишаDaily",
+      "path": "/images/links/afisha-daily.png",
+      "link": "https://daily.afisha.ru/",
+      "gradient": {
+        "from": "#E3E3E0",
+        "to": "#67C1F4"
+      }
+    },
+    {
+      "id": 1,
+      "title": "СекретФирмы",
+      "path": "/images/links/secret-firmi.png",
+      "link": "https://secretmag.ru/",
+      "gradient": {
+        "from": "#E3E3E0",
+        "to": "#FDD97C"
+      }
+    },
+    {
+      "id": 2,
+      "title": "LentaRu",
+      "path": "/images/links/lentaru.png",
+      "link": "https://lenta.ru/",
+      "gradient": {
+        "from": "#E3E3E0",
+        "to": "#767A8E"
+      }
+    },
+    {
+      "id": 3,
+      "title": "MoslentaRu",
+      "path": "/images/links/moslenta.png",
+      "link": "https://moslenta.ru/",
+      "gradient": {
+        "from": "#E3E3E0",
+        "to": "#F6A8A8"
+      }
+    },
+    {
+      "id": 4,
+      "title": "РамблерМедиа",
+      "path": "/images/links/rambler-media.png",
+      "link": "https://motor.ru/",
+      "gradient": {
+        "from": "#E3E3E0",
+        "to": "#7580E5"
+      }
+    },
+    {
+      "id": 5,
+      "title": "АфишаDaily",
+      "path": "/images/links/afisha-daily.png",
+      "link": "https://daily.afisha.ru/",
+      "gradient": {
+        "from": "#E3E3E0",
+        "to": "#67C1F4"
+      }
+    },
+    {
+      "id": 6,
+      "title": "СекретФирмы",
+      "path": "/images/links/secret-firmi.png",
+      "link": "https://secretmag.ru/",
+      "gradient": {
+        "from": "#E3E3E0",
+        "to": "#FDD97C"
+      }
+    },
+    {
+      "id": 7,
+      "title": "LentaRu",
+      "path": "/images/links/lentaru.png",
+      "link": "https://lenta.ru/",
+      "gradient": {
+        "from": "#E3E3E0",
+        "to": "#767A8E"
+      }
+    },
+    {
+      "id": 8,
+      "title": "MoslentaRu",
+      "path": "/images/links/moslenta.png",
+      "link": "https://moslenta.ru/",
+      "gradient": {
+        "from": "#E3E3E0",
+        "to": "#F6A8A8"
+      }
+    },
+    {
+      "id": 9,
+      "title": "РамблерМедиа",
+      "path": "/images/links/rambler-media.png",
+      "link": "https://motor.ru/",
+      "gradient": {
+        "from": "#E3E3E0",
+        "to": "#7580E5"
+      }
+    },
+    {
+      "id": 10,
+      "title": "СекретФирмы",
+      "path": "/images/links/secret-firmi.png",
+      "link": "https://secretmag.ru/",
+      "gradient": {
+        "from": "#E3E3E0",
+        "to": "#FDD97C"
+      }
+    },
+    {
+      "id": 11,
+      "title": "LentaRu",
+      "path": "/images/links/lentaru.png",
+      "link": "https://lenta.ru/",
+      "gradient": {
+        "from": "#E3E3E0",
+        "to": "#767A8E"
+      }
+    }
+  ]
+}

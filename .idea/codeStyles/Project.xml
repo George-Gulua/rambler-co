@@ -35,7 +35,6 @@
         <option name="INDENT_SIZE" value="2" />
         <option name="CONTINUATION_INDENT_SIZE" value="2" />
         <option name="TAB_SIZE" value="2" />
-        <option name="USE_TAB_CHARACTER" value="true" />
       </indentOptions>
     </codeStyleSettings>
     <codeStyleSettings language="JavaScript">
@@ -44,20 +43,20 @@
         <option name="INDENT_SIZE" value="2" />
         <option name="CONTINUATION_INDENT_SIZE" value="2" />
         <option name="TAB_SIZE" value="2" />
-        <option name="USE_TAB_CHARACTER" value="true" />
       </indentOptions>
     </codeStyleSettings>
     <codeStyleSettings language="TypeScript">
       <option name="SOFT_MARGINS" value="80" />
       <indentOptions>
-        <option name="USE_TAB_CHARACTER" value="true" />
+        <option name="INDENT_SIZE" value="2" />
+        <option name="CONTINUATION_INDENT_SIZE" value="2" />
+        <option name="TAB_SIZE" value="2" />
       </indentOptions>
     </codeStyleSettings>
     <codeStyleSettings language="Vue">
       <option name="SOFT_MARGINS" value="80" />
       <indentOptions>
         <option name="CONTINUATION_INDENT_SIZE" value="2" />
-        <option name="USE_TAB_CHARACTER" value="true" />
       </indentOptions>
     </codeStyleSettings>
   </code_scheme>
