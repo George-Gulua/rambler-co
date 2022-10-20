@@ -1,7 +1,8 @@
-import type { NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
 import React from 'react'
 import Projects from '../app/components/screens/projects/Projects'
 import { ApolloClient, gql, InMemoryCache } from '@apollo/client'
+import axios from 'axios'
 
 interface HomePageProps {
   data: {
@@ -9,35 +10,18 @@ interface HomePageProps {
   }
 }
 
-const HomePage: NextPage<HomePageProps> = props => {
-  console.log(props.data.allProjects)
-  return <Projects projects={props.data.allProjects} />
+const HomePage: NextPage<HomePageProps> = ({data}) => {
+  return <Projects projects={data.data.allProjects} />
 }
 
-export const getStaticProps = async () => {
-  const { data } = await client.query({
-    query: gql`
-      query allProjects {
-        allProjects {
-          id
-          title
-          path
-          link
-          gradient
-        }
-      }
-    `
-  })
+export const getStaticProps: GetStaticProps = async () => {
+  const { data } = await axios.get('http://localhost:3000/api/projects')
   return {
     props: {
       data
-    }
+    },
+    revalidate: 10
   }
 }
-
-const client = new ApolloClient({
-  uri: 'http://localhost:5000/graphql',
-  cache: new InMemoryCache()
-})
 
 export default HomePage

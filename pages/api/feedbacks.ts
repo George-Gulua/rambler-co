@@ -5,19 +5,16 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 })
 
-export const getFeedbacks = async () => {
+export default async function handler(req: any, res: any) {
   const { data } = await client.query({
     query: gql`
-      query allProjects {
-        allProjects {
+      query allFeedbacks {
+        allFeedbacks {
           id
-          title
-          path
-          link
-          gradient
+          name
+          text
         }
       }
     `
-  })
-  return data
+  }).then(result => {res.status(200).json(result)})
 }

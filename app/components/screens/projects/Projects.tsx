@@ -26,7 +26,7 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
                     text={
                         'Наши проекты созданы лучшими программистами дизайнерами мира. Каждая задача прорабатывается до тончайших деталей и разрабаетывается согласно выстроенной ахритектуре.'
                     }
-                    buttonText={'заказать проект'}
+                    buttonText={'Заказать проект'}
                     pathImg={'/images/information/computer.svg'}
                     width={340}
                     height={220}

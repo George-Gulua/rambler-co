@@ -6,12 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "json-graphql-server": "npx json-graphql-server graphql-server.json --p 5000",
+    "serve": "concurrently \"npm run dev\" \"npm run json-graphql-server\""
   },
   "dependencies": {
     "@apollo/client": "^3.7.0",
     "axios": "^1.1.3",
     "classnames": "^2.3.2",
+    "concurrently": "^7.4.0",
     "next": "12.3.1",
     "prettier": "^2.7.1",
     "react": "18.2.0",

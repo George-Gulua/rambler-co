@@ -2,6 +2,7 @@ import React, { FC, useRef } from 'react'
 import classes from './Form.module.scss'
 import Image from 'next/image'
 import classNames from 'classnames'
+import { ApolloClient, gql, InMemoryCache } from '@apollo/client'
 
 interface FormProps {
     btnText: string
@@ -13,13 +14,21 @@ const Form: FC<FormProps> = ({ btnText, feedbackType }) => {
     const emailRef = useRef<HTMLInputElement>(null)
     const textRef = useRef<HTMLTextAreaElement>(null)
 
-    const sendMessage = () => {
+    const sendMessage = async () => {
         const message = {
             name: nameRef.current?.value,
             text: textRef.current?.value,
-            email: emailRef.current?.value
         }
-        console.log(message)
+        const { data } = await client.query({
+            query: gql`
+                query updateFeedbacks {
+                    createFeedback(name: "${message.name}", text: "${message.text}") {
+                        name
+                }   
+            }
+            `
+        })
+        console.log(data)
         emailRef.current!.value = ''
         nameRef.current!.value = ''
         textRef.current!.value = ''
@@ -80,5 +89,10 @@ const Form: FC<FormProps> = ({ btnText, feedbackType }) => {
         </div>
     )
 }
+
+const client = new ApolloClient({
+    uri: 'http://localhost:5000/graphql',
+    cache: new InMemoryCache()
+})
 
 export default Form

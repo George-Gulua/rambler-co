@@ -3,6 +3,8 @@ import type { NextPage } from 'next'
 import { ApolloClient, gql, InMemoryCache } from '@apollo/client'
 import { IFeedback } from '../app/types/IFeedback'
 import { useState } from 'react'
+import { GetStaticProps } from 'next'
+import axios from 'axios'
 
 interface ReviewsPageProps {
   data: {
@@ -11,44 +13,17 @@ interface ReviewsPageProps {
 }
 
 const ReviewsPage: NextPage<ReviewsPageProps> = props => {
-  const [feedbacks, setFeedbacks] = useState()
-  console.log(props.data.allFeedbacks)
-  return <Reviews feedbacks={props.data.allFeedbacks} />
+  return <Reviews feedbacks={props.data.data.allFeedbacks} />
 }
 
-export const updateFeedbacks = async () => {
-  const { data } = await client.query({
-    query: gql`
-      mutation updateFeedbacks {
-        createFeedback(name: "oleg", text: "text") {
-          name
-        }
-      }
-    `
-  })
-}
-export const getStaticProps = async () => {
-  const { data } = await client.query({
-    query: gql`
-      query allFeedbacks {
-        allFeedbacks {
-          id
-          name
-          text
-        }
-      }
-    `
-  })
+export const getStaticProps: GetStaticProps = async () => {
+  const { data } = await axios.get('http://localhost:3000/api/feedbacks')
   return {
     props: {
       data
-    }
+    },
+    revalidate: 10
   }
 }
-
-const client = new ApolloClient({
-  uri: 'http://localhost:5000/graphql',
-  cache: new InMemoryCache()
-})
 
 export default ReviewsPage
