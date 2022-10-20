@@ -1,7 +1,6 @@
 import type { GetStaticProps, NextPage } from 'next'
 import React from 'react'
 import Projects from '../app/components/screens/projects/Projects'
-import { ApolloClient, gql, InMemoryCache } from '@apollo/client'
 import axios from 'axios'
 
 interface HomePageProps {
@@ -10,7 +9,7 @@ interface HomePageProps {
   }
 }
 
-const HomePage: NextPage<HomePageProps> = ({data}) => {
+const HomePage: NextPage<HomePageProps> = ({ data }) => {
   return <Projects projects={data.data.allProjects} />
 }
 

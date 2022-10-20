@@ -22,7 +22,7 @@ const Feedbacks: FC<FeedbacksProps> = ({ feedbacks }) => {
               [classes['feedbacks__left-arrow']]: 0 < currentState,
               [classes['feedbacks__arrow-none']]: 0 === currentState
             })}
-            src={'/images/projects.ts/feedback-arrow.svg'}
+            src={'/images/feedbacks/feedback-arrow.svg'}
             width={240}
             height={12}
             alt={'стрелка'}
@@ -52,13 +52,12 @@ const Feedbacks: FC<FeedbacksProps> = ({ feedbacks }) => {
               [classes['feedbacks__arrow-none']]:
                 feedbacks.length === currentState + 3
             })}
-            src={'/images/projects.ts/feedback-arrow.svg'}
+            src={'/images/feedbacks/feedback-arrow.svg'}
             width={240}
             height={12}
             alt={'стрелка'}
             onClick={() => {
               setCurrentState(currentState + 1)
-              console.log(feedbacks)
             }}
           />
         </div>

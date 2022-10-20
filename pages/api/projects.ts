@@ -1,22 +1,11 @@
-import { ApolloClient, gql, InMemoryCache } from '@apollo/client'
+import { RequestHandler } from '@apollo/client'
+import client from '../../app/client'
+import { ALL_PROJECTS } from '../../app/requests'
 
-const client = new ApolloClient({
-  uri: 'http://localhost:5000/graphql',
-  cache: new InMemoryCache()
-})
-
-export default async function handler(req: any, res: any) {
-  const { allProjects } = await client.query({
-    query: gql`
-      query allProjects {
-        allProjects {
-          id
-          title
-          path
-          link
-          gradient
-        }
-      }
-    `
-  }).then(result => res.status(200).json(result))
+export default function handler(req: RequestHandler, res: any) {
+  const allProjects = client
+    .query({
+      query: ALL_PROJECTS
+    })
+    .then(result => res.status(200).json(result))
 }
