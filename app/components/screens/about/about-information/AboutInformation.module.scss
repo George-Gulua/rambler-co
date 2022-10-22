@@ -22,10 +22,13 @@
   }
 
   &__text {
-    line-height: 32px;
-    font-weight: 300;
+    line-height: 40px;
+    font-weight: 400;
+    font-size: 20px;
     cursor: default;
     max-width: 45%;
     align-self: center;
+    padding-left: 20px;
+    border-left: 2px solid $secondary-color;
   }
 }

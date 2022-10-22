@@ -8,10 +8,9 @@ import { FC } from 'react'
 
 interface ReviewsProps {
   feedbacks: IFeedback[]
-  createFeedback: Function
 }
 
-const Reviews: FC<ReviewsProps> = ({ feedbacks, createFeedback }) => {
+const Reviews: FC<ReviewsProps> = ({ feedbacks }) => {
   return (
     <div className={classes['reviews']}>
       <MainContainer
@@ -19,7 +18,6 @@ const Reviews: FC<ReviewsProps> = ({ feedbacks, createFeedback }) => {
         footerText={'Ваши отзывы помогают повысить качество нашей работе '}
         feedbackType={true}
         btnText={'Отправить'}
-        createFeedback={createFeedback}
       >
         <MetaTitle title={'reviews'} />
         <Information

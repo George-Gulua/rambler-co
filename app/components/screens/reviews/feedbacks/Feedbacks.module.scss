@@ -22,7 +22,6 @@
   &__list-arrows {
     display: flex;
     gap: 20px;
-    cursor: default;
 
     &-right-side {
       justify-content: flex-end;
@@ -46,6 +45,5 @@
 
   &__arrow-none {
     visibility: hidden;
-    margin-left: 100px;
   }
 }

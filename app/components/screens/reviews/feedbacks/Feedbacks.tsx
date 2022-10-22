@@ -24,7 +24,7 @@ const Feedbacks: FC<FeedbacksProps> = ({ feedbacks }) => {
         >
           <Image
             className={classNames({
-              [classes['feedbacks__left-arrow']]: 0 < currentState,
+              [classes['feedbacks__left-arrow']]: -1 < currentState,
               [classes['feedbacks__arrow-none']]: -1 === currentState
             })}
             src={'/images/feedbacks/feedback-arrow.svg'}

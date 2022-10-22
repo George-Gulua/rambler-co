@@ -17,10 +17,10 @@
   }
 
   &__text {
-    font-weight: 300;
-    line-height: 30px;
+    line-height: 36px;
     max-width: 728px;
     cursor: default;
+    font-size: 20px;
   }
 
   &__title {
@@ -67,7 +67,8 @@
 
   &__icon {
     img:hover {
-      background-color: #1A63BA;
+      transform: scale(1.10);
+      color: black !important;
     }
   }
 }

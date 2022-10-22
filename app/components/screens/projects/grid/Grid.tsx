@@ -15,7 +15,7 @@ const Grid: FC<GridProps> = ({ projects }) => {
       <div className={classes['container']}>
         <h2 className={classes['project-section__title']}>Наши проекты</h2>
         <p className={classes['project-section__text']}>
-          За все время существования компании Rambler&CO были созданы тысячи
+          За все время существования компании Rambler&CO были созданы сотни
           проектов. Вы можете ознакомиться с каждой нашей работой.
         </p>
         <div className={classes['project-section__grid']}>

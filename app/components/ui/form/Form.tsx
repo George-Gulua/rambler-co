@@ -6,10 +6,9 @@ import classNames from 'classnames'
 interface FormProps {
   btnText: string
   feedbackType: boolean
-  createFeedback: Function
 }
 
-const Form: FC<FormProps> = ({ btnText, feedbackType, createFeedback }) => {
+const Form: FC<FormProps> = ({ btnText, feedbackType }) => {
   const nameRef = useRef<HTMLInputElement>(null)
   const emailRef = useRef<HTMLInputElement>(null)
   const textRef = useRef<HTMLTextAreaElement>(null)
@@ -19,13 +18,12 @@ const Form: FC<FormProps> = ({ btnText, feedbackType, createFeedback }) => {
       name: nameRef.current?.value,
       text: textRef.current?.value
     }
-    createFeedback(message)
     emailRef.current!.value = ''
     nameRef.current!.value = ''
     textRef.current!.value = ''
   }
   return (
-    <div id={'form'} className={classes['form']}>
+    <form id={'form'} method={'post'} className={classes['form']}>
       <div className={classes['form__user-info']}>
         <div
           className={classNames({
@@ -46,6 +44,7 @@ const Form: FC<FormProps> = ({ btnText, feedbackType, createFeedback }) => {
             type="text"
             ref={emailRef}
             placeholder={'Почта'}
+            maxLength={40}
           />
         </div>
         <div className={classes['custom-input']}>
@@ -62,6 +61,7 @@ const Form: FC<FormProps> = ({ btnText, feedbackType, createFeedback }) => {
             type="text"
             ref={nameRef}
             placeholder={'Имя'}
+            maxLength={30}
           />
         </div>
       </div>
@@ -77,7 +77,7 @@ const Form: FC<FormProps> = ({ btnText, feedbackType, createFeedback }) => {
       <button className={classes['btn']} onClick={sendMessage}>
         {btnText}
       </button>
-    </div>
+    </form>
   )
 }
 
