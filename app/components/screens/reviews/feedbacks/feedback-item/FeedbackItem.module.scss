@@ -25,6 +25,11 @@
     }
   }
 
+  &-hidden {
+    position: absolute;
+    left: -1000%;
+  }
+
   &__title {
     margin-bottom: 12px;
   }

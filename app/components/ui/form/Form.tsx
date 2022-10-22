@@ -2,31 +2,24 @@ import React, { FC, useRef } from 'react'
 import classes from './Form.module.scss'
 import Image from 'next/image'
 import classNames from 'classnames'
-import { useMutation, useQuery } from '@apollo/client'
-import { ADD_FEEDBACK, ALL_FEEDBACKS } from '../../../requests'
 
 interface FormProps {
   btnText: string
   feedbackType: boolean
+  createFeedback: Function
 }
 
-const Form: FC<FormProps> = ({ btnText, feedbackType }) => {
+const Form: FC<FormProps> = ({ btnText, feedbackType, createFeedback }) => {
   const nameRef = useRef<HTMLInputElement>(null)
   const emailRef = useRef<HTMLInputElement>(null)
   const textRef = useRef<HTMLTextAreaElement>(null)
-  const { data } = useQuery(ALL_FEEDBACKS)
-  const [AddFeedback] = useMutation(ADD_FEEDBACK, {
-    refetchQueries: [{ query: ALL_FEEDBACKS }]
-  })
 
   const sendMessage = () => {
     const message = {
       name: nameRef.current?.value,
       text: textRef.current?.value
     }
-    AddFeedback({ variables: { name: message.name, text: message.text } }).then(
-      result => console.log(result)
-    )
+    createFeedback(message)
     emailRef.current!.value = ''
     nameRef.current!.value = ''
     textRef.current!.value = ''
@@ -52,7 +45,7 @@ const Form: FC<FormProps> = ({ btnText, feedbackType }) => {
             className={classes['custom-input__field']}
             type="text"
             ref={emailRef}
-            placeholder={'Email'}
+            placeholder={'Почта'}
           />
         </div>
         <div className={classes['custom-input']}>
@@ -68,7 +61,7 @@ const Form: FC<FormProps> = ({ btnText, feedbackType }) => {
             className={classes['custom-input__field']}
             type="text"
             ref={nameRef}
-            placeholder={'Name'}
+            placeholder={'Имя'}
           />
         </div>
       </div>
@@ -79,7 +72,7 @@ const Form: FC<FormProps> = ({ btnText, feedbackType }) => {
         cols={30}
         rows={10}
         maxLength={1000}
-        placeholder={'Message...'}
+        placeholder={'Сообщение...'}
       />
       <button className={classes['btn']} onClick={sendMessage}>
         {btnText}

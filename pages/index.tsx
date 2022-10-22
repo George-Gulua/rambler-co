@@ -2,10 +2,13 @@ import type { GetStaticProps, NextPage } from 'next'
 import React from 'react'
 import Projects from '../app/components/screens/projects/Projects'
 import axios from 'axios'
+import { IProject } from '../app/types/IProject'
 
 interface HomePageProps {
   data: {
-    allProjects: IProject[]
+    data: {
+      allProjects: IProject[]
+    }
   }
 }
 
@@ -14,12 +17,12 @@ const HomePage: NextPage<HomePageProps> = ({ data }) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await axios.get('http://localhost:3000/api/projects')
+  const { data }: any = await axios.get('http://localhost:3000/api/projects')
   return {
     props: {
       data
     },
-    revalidate: 10
+    revalidate: 1
   }
 }
 

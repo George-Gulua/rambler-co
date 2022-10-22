@@ -16,12 +16,21 @@
     display: flex;
     gap: 20px;
     align-items: center;
+    justify-content: center;
   }
 
   &__list-arrows {
     display: flex;
     gap: 20px;
     cursor: default;
+
+    &-right-side {
+      justify-content: flex-end;
+    }
+
+    &-left-side {
+      justify-content: flex-start;
+    }
   }
 
   &__left-arrow {
@@ -36,7 +45,7 @@
   }
 
   &__arrow-none {
-    display: none;
     visibility: hidden;
+    margin-left: 100px;
   }
 }

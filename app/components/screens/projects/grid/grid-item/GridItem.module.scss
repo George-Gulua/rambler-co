@@ -1,5 +1,9 @@
 .grid-item {
   flex: 1 1 calc((100% / 3) - 8rem);
+  transform: scale(1);
+  transition: 1s;
+  opacity: 1;
+
 
   .gradient {
     display: flex;
@@ -23,5 +27,12 @@
     text-align: left;
     margin-top: 12px;
     font-weight: 400;
+  }
+
+  &-hidden {
+    position: absolute;
+    opacity: 1;
+    left: -1000%;
+    transform: scale(0);
   }
 }

@@ -2,13 +2,15 @@
 @import "app/assets/styles/variables.scss";
 
 .advantage-item {
+  cursor: default;
+
   &-main {
     position: absolute;
-    padding: 50px 50px 62px 50px;
+    padding: 64px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-image: url("/images/main-advantage/main-advantage.png");
+    background: url("/images/main-advantage/main-advantage.svg") center center / cover no-repeat;
 
     &::before {
       content: '';
@@ -34,7 +36,7 @@
   }
 
   &__title {
-    font-size: 48px;
+    font-size: 40px;
     color: $secondary-color;
   }
 
@@ -48,7 +50,7 @@
 
     &-left {
       text-align: left;
-      width: 75%;
+      width: 60%;
     }
 
     &-right {
