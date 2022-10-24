@@ -6,6 +6,10 @@
   padding: 160px 0;
   background: $primary-color;
 
+  @include media(laptopM) {
+    padding: 80px 0;
+  }
+
   .container {
     display: flex;
     gap: 220px;
@@ -18,10 +22,10 @@
 
     @include media(laptopM) {
       gap: 0;
-      max-width: 90%;
+      max-width: 80%;
     }
-    @include media(tablet) {
-      max-width: 95%;
+    @include media(mobile) {
+      max-width: 85%;
     }
   }
 

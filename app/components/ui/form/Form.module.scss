@@ -10,6 +10,10 @@
     align-items: center;
     justify-content: space-between;
     gap: 4rem;
+    @include media(tablet) {
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 
   &__message {
@@ -29,6 +33,12 @@
     align-self: center;
     margin-top: 32px;
     width: 40%;
+    @include media(tablet) {
+      width: 70%;
+    }
+    @include media(mobile) {
+      width: 100%;
+    }
   }
 
   .custom-input {

@@ -8,6 +8,7 @@
   justify-content: space-between;
   max-width: 1920px;
   margin: 0 auto;
+  position: relative;
 
   &__logo {
     font-weight: 400;
@@ -19,11 +20,10 @@
     display: flex;
     @include media(tablet) {
       position: absolute;
-      bottom: 174px;
+      bottom: -162px;
       opacity: 0;
       left: 0;
       flex-direction: column;
-      width: 100%;
     }
 
     &-active {

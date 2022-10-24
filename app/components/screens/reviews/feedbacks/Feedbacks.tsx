@@ -29,7 +29,7 @@ const Feedbacks: FC<FeedbacksProps> = ({ feedbacks }) => {
             })}
             src={'/images/feedbacks/feedback-arrow.svg'}
             width={54}
-            height={12}
+            height={40}
             alt={'стрелка'}
             onClick={() => {
               setCurrentState(currentState - 1)
@@ -58,7 +58,7 @@ const Feedbacks: FC<FeedbacksProps> = ({ feedbacks }) => {
             })}
             src={'/images/feedbacks/feedback-arrow.svg'}
             width={54}
-            height={12}
+            height={40}
             alt={'стрелка'}
             onClick={() => {
               setCurrentState(currentState + 1)

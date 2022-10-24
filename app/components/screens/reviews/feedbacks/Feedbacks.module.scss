@@ -17,6 +17,9 @@
     gap: 20px;
     align-items: center;
     justify-content: center;
+    @include media(laptopM) {
+      flex-direction: column;
+    }
   }
 
   &__list-arrows {
@@ -29,6 +32,10 @@
 
     &-left-side {
       justify-content: flex-start;
+    }
+
+    @include media(laptopM) {
+      flex-direction: column;
     }
   }
 
