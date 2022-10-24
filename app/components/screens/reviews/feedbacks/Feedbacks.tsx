@@ -39,7 +39,7 @@ const Feedbacks: FC<FeedbacksProps> = ({ feedbacks }) => {
             {!!feedbacks.length ? (
               feedbacks.map(feedbackItem => (
                 <FeedbackItem
-                  key={feedbackItem.id}
+                  key={+feedbackItem.id}
                   item={feedbackItem}
                   currentState={currentState}
                   active={currentState + 1 === +feedbackItem.id}

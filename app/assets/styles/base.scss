@@ -1,4 +1,5 @@
-@import "app/assets/styles/variables.scss";
+@import "variables";
+@import "media";
 
 .btn {
   border: none;
@@ -16,4 +17,16 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  @include media(laptopL) {
+    max-width: 1024px;
+  }
+  @include media(laptopM) {
+    max-width: 768px;
+  }
+  @include media(tablet) {
+    max-width: 425px;
+  }
+  @include media(mobile) {
+    max-width: 100%;
+  }
 }

@@ -1,4 +1,5 @@
-@import 'app/assets/styles/variables.scss';
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/media';
 
 .header {
   display: flex;
@@ -16,6 +17,21 @@
 
   &__menu {
     display: flex;
+    @include media(tablet) {
+      position: absolute;
+      bottom: 174px;
+      opacity: 0;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &-active {
+      @include media(tablet) {
+        opacity: 1;
+        transition: .3s;
+      }
+    }
   }
 
   &__link {
@@ -38,5 +54,53 @@
     text-align: center;
     padding: 16px 0;
     transition: .3s;
+  }
+}
+
+.burger-menu {
+  margin-right: 20px;
+  padding: 30px 5px;
+  cursor: pointer;
+  display: none;
+
+  & span {
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: $secondary-color;
+    transition: .3s;
+
+    &:before, &:after {
+      content: '';
+      width: inherit;
+      height: inherit;
+      background: $secondary-color;
+      display: inherit;
+      transition: inherit;
+    }
+
+    &:after {
+      transform: translateY(-14px);
+    }
+
+    &:before {
+      transform: translateY(10px);
+    }
+  }
+
+  &-active span {
+    background: transparent;
+
+    &:after {
+      transform: rotate(-225deg);
+    }
+
+    &:before {
+      transform: translateY(4px) rotate(225deg);
+    }
+  }
+
+  @include media(tablet) {
+    display: block;
   }
 }

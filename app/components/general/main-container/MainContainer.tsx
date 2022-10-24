@@ -9,6 +9,7 @@ interface MainContainerProps {
   footerText: string
   btnText: string
   feedbackType: boolean
+  createFeedback?: Function
 }
 
 const MainContainer: FC<MainContainerProps> = ({
@@ -16,7 +17,8 @@ const MainContainer: FC<MainContainerProps> = ({
   footerText,
   footerTitle,
   feedbackType,
-  btnText
+  btnText,
+  createFeedback
 }) => {
   return (
     <div className={classes['main-container']}>
@@ -27,6 +29,7 @@ const MainContainer: FC<MainContainerProps> = ({
         footerTitle={footerTitle}
         feedbackType={feedbackType}
         btnText={btnText}
+        createFeedback={createFeedback}
       />
     </div>
   )

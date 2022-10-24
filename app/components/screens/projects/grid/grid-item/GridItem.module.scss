@@ -1,8 +1,16 @@
+@import "app/assets/styles/_media.scss";
+
 .grid-item {
   flex: 1 1 calc((100% / 3) - 8rem);
   transform: scale(1);
   transition: 1s;
   opacity: 1;
+  @include media(laptopL) {
+    flex: 1 1 calc((100% / 2) - 8rem);
+  }
+  @include media(tablet) {
+    flex: 1 1 100%;
+  }
 
 
   .gradient {

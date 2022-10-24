@@ -1,5 +1,5 @@
 @import "app/assets/styles/base.scss";
-@import "app/assets/styles/variables.scss";
+@import "../../../../assets/styles/variables";
 
 .project-section {
   padding: 80px 0;
@@ -31,6 +31,12 @@
 
   &__add {
     flex: 1 1 calc((100% / 3) - 8rem);
+    @include media(laptopL) {
+      flex: 1 1 calc((100% / 2) - 8rem);
+    }
+    @include media(tablet) {
+      flex: 1 1 100%
+    }
 
     &-hidden {
       display: none;

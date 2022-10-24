@@ -8,13 +8,15 @@ interface FooterProps {
   footerText: string
   btnText: string
   feedbackType: boolean
+  createFeedback?: Function
 }
 
 const Footer: FC<FooterProps> = ({
   footerTitle,
   footerText,
   btnText,
-  feedbackType
+  feedbackType,
+  createFeedback
 }) => {
   return (
     <footer className={classes['footer']}>
@@ -24,7 +26,11 @@ const Footer: FC<FooterProps> = ({
             <h2 className={classes['footer__title']}>{footerTitle}</h2>
             <p className={classes['footer__text']}>{footerText}</p>
           </div>
-          <Form btnText={btnText} feedbackType={feedbackType} />
+          <Form
+            btnText={btnText}
+            feedbackType={feedbackType}
+            createFeedback={createFeedback}
+          />
         </div>
       </div>
       <div className={classes['footer__under-side']}>

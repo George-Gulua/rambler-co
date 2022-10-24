@@ -1,5 +1,5 @@
 @import "app/assets/styles/base.scss";
-@import "app/assets/styles/variables.scss";
+@import "../../../../../assets/styles/variables";
 
 .feedback-item {
   align-items: baseline;
@@ -35,11 +35,15 @@
   }
 
   &__text {
-    overflow: hidden;
-    line-height: 30px;
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
+
     text-overflow: ellipsis;
+    overflow: hidden;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
+    display: -webkit-box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    line-height: 30px;
+
   }
 }

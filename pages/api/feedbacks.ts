@@ -1,17 +1,30 @@
-import { RequestHandler } from '@apollo/client'
 import client from '../../app/client'
-import { ALL_FEEDBACKS } from '../../app/requests'
+import { ADD_FEEDBACK, ALL_FEEDBACKS } from '../../app/requests'
 
-export default function handler(req: RequestHandler, res: any) {
-  try {
-    const data = client
-      .query({
+export default async function handler(req: any, res: any) {
+  const { method } = req
+
+  if (method === 'POST') {
+    try {
+      const newFeedback = await client.mutate({
+        mutation: ADD_FEEDBACK,
+        variables: req.body
+      })
+      res.status(201).json({ data: newFeedback, message: 'Feedback added' })
+    } catch (error) {
+      res.status(500).json({ message: 'Interval Server Error' })
+      console.log(error)
+    }
+  }
+  if (method === 'GET') {
+    try {
+      const feedbacks = await client.query({
         query: ALL_FEEDBACKS
       })
-      .then(result => {
-        res.status(200).json(result)
-      })
-  } catch {
-    res.status(500).send({ error: 'failed to fetch data' })
+      res.status(200).json({ data: feedbacks })
+    } catch (error) {
+      res.status(500).json({ message: 'Interval Server Error' })
+      console.log(error)
+    }
   }
 }

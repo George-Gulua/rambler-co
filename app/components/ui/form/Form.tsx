@@ -6,24 +6,33 @@ import classNames from 'classnames'
 interface FormProps {
   btnText: string
   feedbackType: boolean
+  createFeedback?: Function
 }
 
-const Form: FC<FormProps> = ({ btnText, feedbackType }) => {
+const Form: FC<FormProps> = ({ btnText, feedbackType, createFeedback }) => {
   const nameRef = useRef<HTMLInputElement>(null)
   const emailRef = useRef<HTMLInputElement>(null)
   const textRef = useRef<HTMLTextAreaElement>(null)
 
   const sendMessage = () => {
-    const message = {
+    if (createFeedback) {
+      createFeedback({
+        name: nameRef.current?.value,
+        text: textRef.current?.value
+      })
+    }
+    console.log({
+      email: emailRef.current?.value,
       name: nameRef.current?.value,
       text: textRef.current?.value
-    }
+    })
     emailRef.current!.value = ''
     nameRef.current!.value = ''
     textRef.current!.value = ''
   }
+
   return (
-    <form id={'form'} method={'post'} className={classes['form']}>
+    <div id={'form'} className={classes['form']}>
       <div className={classes['form__user-info']}>
         <div
           className={classNames({
@@ -77,7 +86,7 @@ const Form: FC<FormProps> = ({ btnText, feedbackType }) => {
       <button className={classes['btn']} onClick={sendMessage}>
         {btnText}
       </button>
-    </form>
+    </div>
   )
 }
 
