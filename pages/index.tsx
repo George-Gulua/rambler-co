@@ -16,7 +16,6 @@ interface HomePageProps {
 }
 
 const HomePage: NextPage<HomePageProps> = props => {
-  console.log(props.data.data.data.allProjects)
   return <Projects projects={props.data.data.data.allProjects} />
 }
 
